@@ -1,0 +1,9 @@
+The solution involves restructuring the calculation to avoid mixing percentages and viewport units within a single `calc()` expression. You can either use only percentages or only viewport units, or separate the calculations into multiple steps.  Here's an example using only viewport units: 
+
+```css
+/* bugSolution.css */
+#myElement {
+  width: calc(50vw - 100px);
+}
+```
+This ensures predictable calculations, resolving the unexpected behavior observed in the original code.
